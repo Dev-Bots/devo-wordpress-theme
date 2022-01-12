@@ -1,0 +1,1 @@
+<img class="img-fluid header-img" src="<?php header_image(); ?>" alt=" <?php echo esc_attr(get_bloginfo('name', 'display')); ?>">
