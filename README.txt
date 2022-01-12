@@ -1,1 +1,1 @@
-# devo-wordpress-theme
+# devo_wordpress_theme
