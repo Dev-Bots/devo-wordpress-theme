@@ -139,3 +139,176 @@ li {
     width: 30px;
     border-top: 3px solid rgb(0 169 211)
 }
+
+/* ==================Footer Style======================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@700&display=swap');
+body {
+    background-color: #f3f6fd;
+    font-size: 13px;
+    font-weight: bold;
+    color: rgb(189, 196, 203)
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0
+}
+
+ul>li {
+    padding: 4px;
+    color: #C5CAE9
+}
+
+ul>li:hover {
+    color: #957bda;
+    cursor: pointer
+}
+
+hr {
+    border-width: 3px
+}
+
+.card {
+    padding: 2% 7%
+}
+
+.social>i {
+    padding: 1%;
+    font-size: 15px
+}
+
+.social>i:hover {
+    color: #957bda;
+    cursor: pointer
+}
+
+.policy>div {
+    padding: 4px
+}
+
+.heading {
+    font-family: 'Titillium Web', sans-serif;
+    color: black
+}
+
+.divider {
+    border-top: 2px solid
+}
+
+
+/* ==================Blog Display Style=============================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+html,
+body {
+    height: 100%
+}
+
+a:link {
+    text-decoration: none;
+}
+
+* {
+    padding: 0px;
+    margin: 0px
+}
+
+body {
+    background-color: #dde3fb;
+    display: grid;
+    place-items: center;
+    height: 400px
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    font-family: 'Manrope', sans-serif
+}
+
+#head1 {
+    color: #b5b4b9
+}
+
+p {
+    color: #837e92
+}
+
+.btn {
+    margin: 0px;
+    background-color: #5854ff;
+    border-radius: 5px
+}
+
+.btn:hover {
+    background-color: #3f5dd5
+}
+
+.btn:focus {
+    box-shadow: none;
+    outline: none
+}
+
+
+/* =========================Testimonial Style============================================== */
+
+.testimonial-container {
+    background-color: white;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .2);
+    margin-bottom: 50px
+}
+
+.title {
+    font-size: 25px;
+    font-weight: 100
+}
+
+.icon {
+    position: relative;
+    bottom: 11px
+}
+
+.mt-100 {
+    margin-top: 100px
+}
+
+.profile img {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%
+}
+
+.card {
+    border-radius: 15px;
+    margin-left: 30px;
+    margin-right: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2)
+}
+
+.card-body {
+    position: relative;
+    bottom: 35px
+}
+
+.testimonial-btn {
+    margin-top: 36px;
+    margin-bottom: 45px;
+    background-color: #AB47BC;
+    border: none;
+    color: #fff
+}
+
+.btn:hover {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+    color: #fff
+}
+
+.header {
+    padding-top: 40px
+}
