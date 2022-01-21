@@ -162,5 +162,42 @@ function front_about_customizer( $wp_customize ) {
 
   add_action( 'customize_register', 'front_about_customizer', 11 );
 
+// ========================Adding services section customizer=======================================================
+
+function front_services_customizer( $wp_customize ) {
+	$wp_customize->add_section( 'devo_services', array(
+		'title' => 'Devo Sevices Section+', // The title of section
+		'description' => 'Settings for the services section on the front page.', // The description of section
+	) );
+  
+
+  // Services section header on the front page
+  $wp_customize->add_setting( 'front_services_header', array(
+    'default' => 'Services',
+    // Let everything else default
+  ) );
+
+  $wp_customize->add_control( 'front_services_header', array(
+    'label' => 'Services Section Header',
+    'section' => 'devo_services', // id of section to which the setting belongs
+    // Let everything else default
+  ) );
+
+   // Services section header on the front page
+   $wp_customize->add_setting( 'front_services_checkbox', array(
+    'default' => 0,
+    // Let everything else default
+  ) );
+
+  $wp_customize->add_control( 'front_services_checkbox', array(
+    'label' => 'Hide Services Section',
+    'type' => 'checkbox',
+    'section' => 'devo_services', // id of section to which the setting belongs
+    // Let everything else default
+  ) );
+
+  }
+
+  add_action( 'customize_register', 'front_services_customizer', 11 );
 ?>
 
