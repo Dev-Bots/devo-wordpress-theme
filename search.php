@@ -28,3 +28,20 @@ get_header();
                         </div>
                     </div>
                 </div>
+                <br>
+            <!-- </div> -->
+            </div>
+            <?php }
+            ?>
+            
+            
+            <?php }} 
+            else { ?>
+                <h1 class="container justify-content-center mt-4">No Result Found</h1>
+            <?php }
+            ?>
+    </div>
+<?php
+
+get_footer();
+?>
