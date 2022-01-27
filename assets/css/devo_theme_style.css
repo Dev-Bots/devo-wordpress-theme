@@ -459,3 +459,60 @@ li a {
 .blog-aside .post-aside {
     margin-bottom: 15px;
 }
+.blog-aside .post-aside .post-aside-title h5 {
+    margin: 0;
+}
+
+.blog-aside .post-aside .post-aside-title a {
+    font-size: 18px;
+    color: #20247b;
+    font-weight: 600;
+}
+
+.blog-aside .post-aside .post-aside-meta {
+    padding-bottom: 10px;
+}
+
+.blog-aside .post-aside .post-aside-meta a {
+    color: #6F8BA4;
+    font-size: 12px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.blog-aside .latest-post-aside+.latest-post-aside {
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+.blog-aside .latest-post-aside .lpa-right {
+    width: 90px;
+}
+
+.blog-aside .latest-post-aside .lpa-right img {
+    border-radius: 3px;
+}
+
+.blog-aside .latest-post-aside .lpa-left {
+    padding-right: 15px;
+}
+
+.blog-aside .latest-post-aside .lpa-title h5 {
+    margin: 0;
+    font-size: 15px;
+}
+
+.blog-aside .latest-post-aside .lpa-title a {
+    color: #20247b;
+    font-weight: 600;
+}
+
+.blog-aside .latest-post-aside .lpa-meta a {
+    color: #6F8BA4;
+    font-size: 12px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-right: 10px;
+}
