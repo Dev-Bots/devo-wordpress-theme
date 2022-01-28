@@ -1,4 +1,9 @@
-<?php
+
+
+<?php /*
+	
+
+*/
 
 if( post_password_required() ){
 	return;
@@ -17,7 +22,7 @@ if( post_password_required() ){
 			<?php
 				
 				printf(
-					esc_html( _nx( 'One comment on &ldquo;%2$s&rdquo;', '%1$s comments on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'sunsettheme' ) ),
+					esc_html( _nx( 'One comment on &ldquo;%2$s&rdquo;', '%1$s comments on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'devotheme' ) ),
 					number_format_i18n( get_comments_number() ),
 					'<span>' . get_the_title() . '</span>'
 				);
@@ -25,16 +30,16 @@ if( post_password_required() ){
 			?>
 		</h2>
 		
-		<?php devo_get_post_navigation(); ?>
+
 		
-		<ol class="comment-list">
+		<ul class="comment-list">
 			
 			<?php 
 				
 				$args = array(
 					'walker'			=> null,
 					'max_depth' 		=> '',
-					'style'				=> 'ol',
+					'style'				=> 'ul',
 					'callback'			=> null,
 					'end-callback'		=> null,
 					'type'				=> 'all',
@@ -54,13 +59,13 @@ if( post_password_required() ){
 			
 		</ol>
 		
-		<?php sunset_get_post_navigation(); ?>
+
 		
 		<?php 
 			if( !comments_open() && get_comments_number() ):
 		?>
 			 
-			 <p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'sunsettheme' ); ?></p>
+			 <p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'devotheme' ); ?></p>
 			 
 		<?php
 			endif;
@@ -99,4 +104,4 @@ if( post_password_required() ){
 		
 	?>
 	
-<?php get_template_part('template-parts/comments/comment', 'design'); ?>
+</div>

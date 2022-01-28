@@ -1,4 +1,4 @@
-<div class="blog-single gray-bg">
+<div class="blog-single gray-bg" style="font-family: <?php echo get_theme_mod( 'devo_text_color' ); ?>>
         <div class="container">
             <!-- <div class="row align-items-start"> -->
             <div class="row">
@@ -32,6 +32,7 @@
                         </div>
                     </article>
 <!-- comments add -->
+<?php comments_template()?>
                 </div>
 <!-- sidebar add -->
             </div>

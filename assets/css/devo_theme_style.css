@@ -1,8 +1,23 @@
+:root {
+    /*#fa9746; */
+    --primary: #20247B;
+    --secondary: #FC5356;
+    --tertiary: #007BFF;
+    /* --tertiary: #7499f1; */
+    --container-bg: whitesmoke;
+    --text-color: #777;
+    --link-color: #20247B;
+}
+
 li a {
     text-decoration: none;
-    color: whitesmoke;
+    color: var(--container-bg);
     display: inline;
-    margin-left: 5px;
+    margin: 10px;
+}
+
+.boil {
+    background-color: black;
 }
 
 
@@ -10,25 +25,37 @@ li a {
     display: inline;
 } */
 
-
 #devo_welcome_text {
-    position: absolute;
-    top: 40%;
-    left: 20%;
-    color: whitesmoke;
+    color: var(--container-bg);
 }
 
 #callToAction {
-    position: absolute;
-    top: 50%;
-    left: 48%;
-    color: whitesmoke;
+    color: var(--container-bg);
 }
-
 
 .jumbotron {
     text-align: center;
-    background-color: #e9ecef;
+    /* background-color: #e9ecef; */
+    /* background-color: white; */
+    padding: 0rem 0rem;
+    width: 100%;
+}
+
+.navi {
+    list-style-type: none;
+    /* margin: 10px; */
+    padding: 10px;
+    text-decoration: none;
+    background-color: var(--tertiary);
+    overflow: hidden;
+}
+
+.navia {
+    padding-left: 30%;
+}
+
+.navia a:hover {
+    text-decoration: none;
 }
 
 
@@ -49,7 +76,6 @@ li a {
 }
 
 .service-title {
-    color: #fa9746;
     margin-bottom: 30px;
     position: relative
 }
@@ -61,7 +87,7 @@ li a {
     height: 20px;
     width: 20px;
     transform: rotate(45deg);
-    background-color: #7499f1;
+    background-color: var(--tertiary);
     box-shadow: 0px 4px 4px 0px #aaa;
     border-radius: 4px;
     content: ''
@@ -93,7 +119,7 @@ li a {
     border-radius: 15px;
     transform: rotate(45deg);
     padding: 10px;
-    background-color: #7499f1;
+    background-color: var(--tertiary);
     box-shadow: 0px 0px 27px 0px #ccc;
     border: 2px dotted #eaf3fa
 }
@@ -101,7 +127,7 @@ li a {
 .square i {
     transform: rotate(315deg);
     display: block;
-    color: #eaf3fa;
+    /* color: #eaf3fa; */
     font-size: 40px;
     padding-top: 17px;
     padding-right: 14px
@@ -113,7 +139,7 @@ li a {
     top: 0;
     width: 1px;
     height: 100%;
-    background-color: #fa9746;
+    background-color: var(--secondary);
     content: ''
 }
 
@@ -123,7 +149,7 @@ li a {
     top: 66px;
     width: 1px;
     height: 88%;
-    background-color: #fa9746;
+    background-color: var(--secondary);
     content: '';
     transform: rotate(90deg)
 }
@@ -131,22 +157,22 @@ li a {
 .services .serv .num {
     width: 60px;
     height: 60px;
-    background-color: #7499f1;
-    box-shadow: 0px 0px 15px 0px #00a9d3;
+    background-color: var(--tertiary);
+    box-shadow: 0px 0px 15px 0px var(--tertiary);
     margin: -38px auto 15px auto;
     border-radius: 50%;
-    color: #fff;
+    /* color: #fff; */
     font-size: 30px;
     padding-top: 7px;
     border: 1px dashed
 }
 
 .services .serv h5 {
-    color: #fa9746
+    color: var(--secondary)
 }
 
 .services .serv p {
-    color: #777
+    color: var(--text-color)
 }
 
 .services .serv hr {
@@ -159,10 +185,12 @@ li a {
 
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@700&display=swap');
 .site-footer {
-    background-color: #f3f6fd;
+    /* background-color: #f3f6fd; */
     font-size: 13px;
     font-weight: bold;
-    color: rgb(189, 196, 203)
+    /* color: rgb(189, 196, 203); */
+    color: var(--text-color);
+    border: 0px !important;
 }
 
 .site-footer ul {
@@ -173,11 +201,11 @@ li a {
 
 .site-footer ul>li {
     padding: 4px;
-    color: #C5CAE9
+    color: var(--text-color)
 }
 
 .site-footer ul>li:hover {
-    color: #957bda;
+    color: --tertiary;
     cursor: pointer
 }
 
@@ -185,10 +213,11 @@ li a {
     border-width: 3px
 }
 
-.site-footer .card {
+
+/* .site-footer .card {
     padding: 2% 7%;
     border-radius: 20px;
-}
+} */
 
 .site-footer .social>i {
     padding: 1%;
@@ -196,7 +225,7 @@ li a {
 }
 
 .site-footer .social>i:hover {
-    color: #957bda;
+    color: var(--tertiary);
     cursor: pointer
 }
 
@@ -223,7 +252,7 @@ li a {
 
 .site-blog {
     padding: 0px;
-    margin: 0px
+    margin: 40px
 }
 
 .site-blog {
@@ -251,7 +280,7 @@ li a {
 .site-blog .btn {
     margin: 0px;
     /* background-color: #ffffff; */
-    background-color: #5854ff;
+    background-color: var(--tertiary);
     border-radius: 5px
 }
 
@@ -272,7 +301,7 @@ li a {
     background-color: white;
     text-align: center;
     border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, .2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
     margin-bottom: 50px
 }
 
@@ -420,6 +449,7 @@ li a {
 .blog-aside .widget-body {
     padding: 15px;
 }
+
 .blog-aside .widget-title {
     padding: 15px;
     border-bottom: 1px solid #eee;
@@ -459,6 +489,7 @@ li a {
 .blog-aside .post-aside {
     margin-bottom: 15px;
 }
+
 .blog-aside .post-aside .post-aside-title h5 {
     margin: 0;
 }
@@ -516,6 +547,7 @@ li a {
     display: inline-block;
     margin-right: 10px;
 }
+
 .tag-cloud a {
     padding: 4px 15px;
     font-size: 13px;
@@ -655,8 +687,7 @@ img {
 }
 
 
-/* Contact Us
----------------------*/
+/* ======================Comment Section=========================== */
 
 .contact-name {
     margin-bottom: 30px;
@@ -798,4 +829,21 @@ img {
     -ms-transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
+}
+
+#main {
+    height: 100vh;
+}
+
+
+/* ===================Comments Display================================== */
+
+comments-area {}
+
+comment-title {}
+
+ul.comment-list li a {
+    color: var(--link-color);
+    display: inline;
+    margin: 10px;
 }
