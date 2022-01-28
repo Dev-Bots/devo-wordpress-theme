@@ -32,7 +32,6 @@
                         </div>
                     </article>
 <!-- comments add -->
-<?php comments_template()?>
                 </div>
 <!-- sidebar add -->
             </div>

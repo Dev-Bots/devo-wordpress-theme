@@ -29,7 +29,7 @@ get_header();
                     </div>
                 </div>
                 <br>
-            <!-- </div> -->
+<!-- </div> -->
             </div>
             <?php }
             ?>
@@ -41,6 +41,9 @@ get_header();
             <?php }
             ?>
     </div>
+
+
+
 <?php
 
 get_footer();

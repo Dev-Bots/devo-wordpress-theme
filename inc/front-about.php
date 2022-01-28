@@ -6,6 +6,7 @@ function front_about_customizer( $wp_customize ) {
 	) );
   $wp_customize->add_setting( 'front_about_header', array(
     'default' => 'About this Theme',
+    'sanitize_callback' => 'sanitize_text_field',
     // Let everything else default
   ) );
 
@@ -18,6 +19,7 @@ function front_about_customizer( $wp_customize ) {
 
   $wp_customize->add_setting( 'front_about_body', array(
     'default' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta animi aperiam incidunt sed beatae cumque architecto corrupti veniam alias molestias error totam dolorum odit illo dolore quam, at distinctio nobis.',
+    'sanitize_callback' => 'sanitize_text_field',
     // Let everything else default
   ) );
 
@@ -31,6 +33,7 @@ function front_about_customizer( $wp_customize ) {
   // check box whether to display the about section or not
   $wp_customize->add_setting( 'front_about_checkbox', array(
 		'default' => 0,
+    'sanitize_callback' => 'sanitize_text_field',
 	) );
 
 	$wp_customize->add_control( 'front_about_checkbox', array(

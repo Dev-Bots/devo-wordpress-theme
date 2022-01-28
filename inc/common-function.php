@@ -1,9 +1,11 @@
 <?php
 // =======================Add Menu=======================================
 
-// Add Menu Support
-add_theme_support('menus');
+
+add_theme_support( "title-tag" );
 add_theme_support( 'custom-header' );
+add_theme_support( 'custom-logo' );
+add_theme_support( 'post-thumbnails' );
 
 // =======================Register Nav Menu =======================================
 
@@ -11,8 +13,8 @@ add_theme_support( 'custom-header' );
 function devo_theme_menu() {
     register_nav_menus(
       array(
-        'top-menu' => __( 'Top Menu' ),
-        'footer-menu' => __( 'Footer Menu' )
+        'top-menu' => __( 'Top Menu', 'devo' ),
+        'footer-menu' => __( 'Footer Menu', 'devo' )
       )
     );
   }
@@ -22,21 +24,10 @@ add_action( 'init', 'devo_theme_menu' );
 
 // =======================Adding sidebar =======================================
 
-// Adding sidebar 
-function my_custom_theme_sidebar() {
-  register_sidebar( array(
-      'name' => __( 'Primary Sidebar', 'my-custom-theme' ),
-      'id'   => 'sidebar-1',
-       'before_widget' => '<div>',
-      'after_widget'  => '</div>',
-      'before_title'  => '<h2 class="rounded">',
-      'after_title'   => '</h2>',
-  ) );
-}
-
-add_action( 'widgets_init', 'my_custom_theme_sidebar' );
 
 // ======================Adding Style ===========================================
+
+
 
 // Adding Style 
 function devo_theme_loadStyle()
@@ -68,7 +59,20 @@ function devo_theme_loadScript()
 
 add_action( 'wp_enqueue_scripts', 'devo_theme_loadScript' );
 
+// ==========================Adding Google Fonts Script ===========================================
+function calling_google_font_script(){
+  // Getting the set font from options.
+  $temp_font_name = get_theme_mod('ounox_fonts_display');
+  // Adding Font in Google URL
+  $google_font = esc_url('https://fonts.googleapis.com/css?family=' . $temp_font_name);
+  // Now Calling google font in website
+  wp_enqueue_style( 'google-fonts', esc_url_raw($google_font), array(), null );
+}
+
+add_action('wp_enqueue_scripts','calling_google_font_script');
+
 // ==================Elementor support===================
+
 function theme_prefix_register_elementor_locations( $elementor_theme_manager ) {
 
 	$elementor_theme_manager->register_all_core_location();

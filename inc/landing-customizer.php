@@ -9,6 +9,7 @@ function landing_customizer( $wp_customize ) {
   // ============= welcome text ================
 	$wp_customize->add_setting( 'devo_welcome_text', array(
     'default' => 'Hello world',
+    'sanitize_callback' => 'sanitize_text_field',
     // Let everything else default
   ) );
 
@@ -22,6 +23,7 @@ function landing_customizer( $wp_customize ) {
   // ============= call to action ================
   $wp_customize->add_setting( 'call_to_action_name', array(
     'default' => 'More',
+    'sanitize_callback' => 'sanitize_text_field',
     // Let everything else default
   ) );
 
@@ -34,6 +36,7 @@ function landing_customizer( $wp_customize ) {
 
   $wp_customize->add_setting( 'call_to_action', array(
     'default' => '/blog',
+    'sanitize_callback' => 'sanitize_text_field',
     // Let everything else default
   ) );
 

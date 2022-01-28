@@ -8,14 +8,15 @@
     <h1>About this theme</h1>      
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta animi aperiam incidunt sed beatae cumque architecto corrupti veniam alias molestias error totam dolorum odit illo dolore quam, at distinctio nobis.</p>
   </div> -->
+    </div>
 
  <?php
   if (!get_theme_mod( 'front_about_checkbox' )) { ?>
         <div class="container">
         <div class="row">
         <div>
-            <h1 style="color: #777;"><?php echo get_theme_mod( 'front_about_header' ); ?></h1>      
-            <p style="color: #777;"><?php echo get_theme_mod( 'front_about_body' ); ?></p>
+            <h1 style="color: #777;"><?php echo esc_html(get_theme_mod( 'front_about_header' )); ?></h1>      
+            <p style="color: #777;"><?php echo esc_html(get_theme_mod( 'front_about_body' )); ?></p>
         </div>
        
         </div>
@@ -39,7 +40,6 @@
 
 
 
-</div>
 
 
 

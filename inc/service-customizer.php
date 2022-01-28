@@ -10,6 +10,7 @@
 
   // Services section header on the front page
   $wp_customize->add_setting( 'front_services_header', array(
+    'sanitize_callback' => 'sanitize_text_field',
     'default' => 'Services',
     // Let everything else default
   ) );
@@ -20,10 +21,15 @@
     // Let everything else default
   ) );
 
+  function devo_sanitize_text( $input ) {
+    return wp_kses_post( force_balance_tags( $input ) );
+  }
+
   // ++++++++++++++++++++++++Service 1 ++++++++++++++++++++++++++++++++++
 
   $wp_customize->add_setting( 'front_service1_icon', array(
     'default' => 'fas fa-code',
+    'sanitize_callback' => 'sanitize_text_field',
     // Let everything else default
   ) );
 
@@ -35,6 +41,7 @@
 
   $wp_customize->add_setting( 'front_service1_title', array(
     'default' => 'Clean Code',
+    'sanitize_callback' => 'sanitize_text_field',
     // Let everything else default
   ) );  
 
@@ -46,6 +53,7 @@
 
   $wp_customize->add_setting( 'front_service1_body', array(
     'default' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
+    'sanitize_callback' => 'sanitize_text_field',
     // Let everything else default
   ) );  
 
@@ -57,6 +65,7 @@
   
   $wp_customize->add_setting( 'front_service1_checkbox', array(
     'default' => 0,
+    'sanitize_callback' => 'sanitize_text_field',
     // Let everything else default
   ) );  
 
@@ -68,170 +77,185 @@
   ) );
 
   // ---------------------------------------------------------------
- // ++++++++++++++++++++++++Service 2 ++++++++++++++++++++++++++++++++++
 
- $wp_customize->add_setting( 'front_service2_icon', array(
-    'default' => 'fas fa-cogs',
-    // Let everything else default
-  ) );
+    // ++++++++++++++++++++++++Service 2 ++++++++++++++++++++++++++++++++++
 
-  $wp_customize->add_control( 'front_service2_icon', array(
-    'label' => 'Service 2 Icon',
-    'section' => 'devo_services', // id of section to which the setting belongs
-    // Let everything else default
-  ) );
-
-  $wp_customize->add_setting( 'front_service2_title', array(
-    'default' => 'Problem Solving',
-    // Let everything else default
-  ) );  
-
-  $wp_customize->add_control( 'front_service2_title', array(
-    'label' => 'Service 2 title',
-    'section' => 'devo_services', // id of section to which the setting belongs
-    // Let everything else default
-  ) );
-
-  $wp_customize->add_setting( 'front_service2_body', array(
-    'default' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
-    // Let everything else default
-  ) );  
-
-  $wp_customize->add_control( 'front_service2_body', array(
-    'label' => 'Service 2 body',
-    'section' => 'devo_services', // id of section to which the setting belongs
-    // Let everything else default
-  ) );
+    $wp_customize->add_setting( 'front_service2_icon', array(
+      'default' => 'fas fa-cogs',
+      'sanitize_callback' => 'sanitize_text_field',
+      // Let everything else default
+    ) );
   
-  $wp_customize->add_setting( 'front_service2_checkbox', array(
-    'default' => 0,
-    // Let everything else default
-  ) );  
+    $wp_customize->add_control( 'front_service2_icon', array(
+      'label' => 'Service 2 Icon',
+      'section' => 'devo_services', // id of section to which the setting belongs
+      // Let everything else default
+    ) );
+  
+    $wp_customize->add_setting( 'front_service2_title', array(
+      'default' => 'Problem Solving',
+      'sanitize_callback' => 'sanitize_text_field',
+      // Let everything else default
+    ) );  
+  
+    $wp_customize->add_control( 'front_service2_title', array(
+      'label' => 'Service 2 title',
+      'section' => 'devo_services', // id of section to which the setting belongs
+      // Let everything else default
+    ) );
+  
+    $wp_customize->add_setting( 'front_service2_body', array(
+      'default' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
+      'sanitize_callback' => 'sanitize_text_field',
+      // Let everything else default
+    ) );  
+  
+    $wp_customize->add_control( 'front_service2_body', array(
+      'label' => 'Service 2 body',
+      'section' => 'devo_services', // id of section to which the setting belongs
+      // Let everything else default
+    ) );
+    
+    $wp_customize->add_setting( 'front_service2_checkbox', array(
+      'default' => 0,
+      'sanitize_callback' => 'sanitize_text_field',
+      // Let everything else default
+    ) );  
+  
+    $wp_customize->add_control( 'front_service2_checkbox', array(
+      'label' => 'Hide Service 2',
+      'type' => 'checkbox',
+      'section' => 'devo_services', // id of section to which the setting belongs
+      // Let everything else default
+    ) );
+  
+    // ---------------------------------------------------------------
 
-  $wp_customize->add_control( 'front_service2_checkbox', array(
-    'label' => 'Hide Service 2',
+    // ++++++++++++++++++++++++Service 3 ++++++++++++++++++++++++++++++++++
+
+    $wp_customize->add_setting( 'front_service3_icon', array(
+      'default' => 'fas fa-cogs',
+      'sanitize_callback' => 'sanitize_text_field',
+      // Let everything else default
+    ) );
+  
+    $wp_customize->add_control( 'front_service3_icon', array(
+      'label' => 'Service 3 Icon',
+      'section' => 'devo_services', // id of section to which the setting belongs
+      // Let everything else default
+    ) );
+  
+    $wp_customize->add_setting( 'front_service3_title', array(
+      'default' => 'Problem Solving',
+      'sanitize_callback' => 'sanitize_text_field',
+      // Let everything else default
+    ) );  
+  
+    $wp_customize->add_control( 'front_service3_title', array(
+      'label' => 'Service 3 title',
+      'section' => 'devo_services', // id of section to which the setting belongs
+      // Let everything else default
+    ) );
+  
+    $wp_customize->add_setting( 'front_service3_body', array(
+      'default' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
+      'sanitize_callback' => 'sanitize_text_field',
+      // Let everything else default
+    ) );  
+  
+    $wp_customize->add_control( 'front_service3_body', array(
+      'label' => 'Service 3 body',
+      'section' => 'devo_services', // id of section to which the setting belongs
+      // Let everything else default
+    ) );
+    
+    $wp_customize->add_setting( 'front_service3_checkbox', array(
+      'default' => 0,
+      'sanitize_callback' => 'sanitize_text_field',
+      // Let everything else default
+    ) );  
+  
+    $wp_customize->add_control( 'front_service3_checkbox', array(
+      'label' => 'Hide Service 3',
+      'type' => 'checkbox',
+      'section' => 'devo_services', // id of section to which the setting belongs
+      // Let everything else default
+    ) );
+  
+    // ---------------------------------------------------------------
+
+    // ++++++++++++++++++++++++Service 4 ++++++++++++++++++++++++++++++++++
+
+    $wp_customize->add_setting( 'front_service4_icon', array(
+      'default' => 'fas fa-cogs',
+      'sanitize_callback' => 'sanitize_text_field',
+      // Let everything else default
+    ) );
+  
+    $wp_customize->add_control( 'front_service4_icon', array(
+      'label' => 'Service 4 Icon',
+      'section' => 'devo_services', // id of section to which the setting belongs
+      // Let everything else default
+    ) );
+  
+    $wp_customize->add_setting( 'front_service4_title', array(
+      'default' => 'Problem Solving',
+      'sanitize_callback' => 'sanitize_text_field',
+      // Let everything else default
+    ) );  
+  
+    $wp_customize->add_control( 'front_service4_title', array(
+      'label' => 'Service 4 title',
+      'section' => 'devo_services', // id of section to which the setting belongs
+      // Let everything else default
+    ) );
+  
+    $wp_customize->add_setting( 'front_service4_body', array(
+      'default' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
+      'sanitize_callback' => 'sanitize_text_field',
+      // Let everything else default
+    ) );  
+  
+    $wp_customize->add_control( 'front_service4_body', array(
+      'label' => 'Service 4 body',
+      'section' => 'devo_services', // id of section to which the setting belongs
+      // Let everything else default
+    ) );
+    
+    $wp_customize->add_setting( 'front_service4_checkbox', array(
+      'default' => 0,
+      'sanitize_callback' => 'sanitize_text_field',
+      // Let everything else default
+    ) );  
+  
+    $wp_customize->add_control( 'front_service4_checkbox', array(
+      'label' => 'Hide Service 4',
+      'type' => 'checkbox',
+      'section' => 'devo_services', // id of section to which the setting belongs
+      // Let everything else default
+    ) );
+  
+    // ---------------------------------------------------------------
+
+   // Services section header on the front page
+   $wp_customize->add_setting( 'front_services_checkbox', array(
+    'default' => 0,
+    'sanitize_callback' => 'sanitize_text_field',
+    // Let everything else default
+  ) );
+
+  $wp_customize->add_control( 'front_services_checkbox', array(
+    'label' => 'Hide the whole Services Section',
     'type' => 'checkbox',
     'section' => 'devo_services', // id of section to which the setting belongs
     // Let everything else default
   ) );
 
-  // ---------------------------------------------------------------
-  // ++++++++++++++++++++++++Service 3 ++++++++++++++++++++++++++++++++++
-
-  $wp_customize->add_setting( 'front_service3_icon', array(
-    'default' => 'fas fa-cogs',
-    // Let everything else default
-  ) );
-
-  $wp_customize->add_control( 'front_service3_icon', array(
-    'label' => 'Service 3 Icon',
-    'section' => 'devo_services', // id of section to which the setting belongs
-    // Let everything else default
-  ) );
-
-  $wp_customize->add_setting( 'front_service3_title', array(
-    'default' => 'Problem Solving',
-    // Let everything else default
-  ) );  
-
-  $wp_customize->add_control( 'front_service3_title', array(
-    'label' => 'Service 3 title',
-    'section' => 'devo_services', // id of section to which the setting belongs
-    // Let everything else default
-  ) );
-
-  $wp_customize->add_setting( 'front_service3_body', array(
-    'default' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
-    // Let everything else default
-  ) );  
-
-  $wp_customize->add_control( 'front_service3_body', array(
-    'label' => 'Service 3 body',
-    'section' => 'devo_services', // id of section to which the setting belongs
-    // Let everything else default
-  ) );
-  
-  $wp_customize->add_setting( 'front_service3_checkbox', array(
-    'default' => 0,
-    // Let everything else default
-  ) );  
-
-  $wp_customize->add_control( 'front_service3_checkbox', array(
-    'label' => 'Hide Service 3',
-    'type' => 'checkbox',
-    'section' => 'devo_services', // id of section to which the setting belongs
-    // Let everything else default
-  ) );
-
-  // ---------------------------------------------------------------
-
-  // ++++++++++++++++++++++++Service 4 ++++++++++++++++++++++++++++++++++
-
-  $wp_customize->add_setting( 'front_service4_icon', array(
-    'default' => 'fas fa-cogs',
-    // Let everything else default
-  ) );
-
-  $wp_customize->add_control( 'front_service4_icon', array(
-    'label' => 'Service 4 Icon',
-    'section' => 'devo_services', // id of section to which the setting belongs
-    // Let everything else default
-  ) );
-
-  $wp_customize->add_setting( 'front_service4_title', array(
-    'default' => 'Problem Solving',
-    // Let everything else default
-  ) );  
-
-  $wp_customize->add_control( 'front_service4_title', array(
-    'label' => 'Service 4 title',
-    'section' => 'devo_services', // id of section to which the setting belongs
-    // Let everything else default
-  ) );
-
-  $wp_customize->add_setting( 'front_service4_body', array(
-    'default' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
-    // Let everything else default
-  ) );  
-
-  $wp_customize->add_control( 'front_service4_body', array(
-    'label' => 'Service 4 body',
-    'section' => 'devo_services', // id of section to which the setting belongs
-    // Let everything else default
-  ) );
-  
-  $wp_customize->add_setting( 'front_service4_checkbox', array(
-    'default' => 0,
-    // Let everything else default
-  ) );  
-
-  $wp_customize->add_control( 'front_service4_checkbox', array(
-    'label' => 'Hide Service 4',
-    'type' => 'checkbox',
-    'section' => 'devo_services', // id of section to which the setting belongs
-    // Let everything else default
-  ) );
-
-  // ---------------------------------------------------------------
-
- // Services section header on the front page
- $wp_customize->add_setting( 'front_services_checkbox', array(
-  'default' => 0,
-  // Let everything else default
-) );
-
-$wp_customize->add_control( 'front_services_checkbox', array(
-  'label' => 'Hide the whole Services Section',
-  'type' => 'checkbox',
-  'section' => 'devo_services', // id of section to which the setting belongs
-  // Let everything else default
-) );
 
 
 
 
+  }
 
-}
-
-add_action( 'customize_register', 'front_services_customizer', 11 );
+  add_action( 'customize_register', 'front_services_customizer', 11 );
 ?>
