@@ -1,35 +1,51 @@
 <div class="services pd">
     <div class="container">
-        <h3 class="title">Services</h3>
+        <h3 class="title"><?php echo get_theme_mod( 'front_services_header' ); ?></h3>
         <div class="row text-center">
-            <div class="col-md-3">
-                <div class="square"><i class="fas fa-code"></i></div>
+        <?php
+            if (!get_theme_mod( 'front_service1_checkbox' )) { ?>
+            <div class="col-sm-12 col-md">
+                <div class="square"><i class="<?php echo get_theme_mod( 'front_service1_icon' ) ?>"></i></div>
                 <div class="serv">
-                    <h5>Clean Code</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                    <h5><?php echo get_theme_mod( 'front_service1_title' ) ?></h5>
+                    <p><?php echo get_theme_mod( 'front_service1_body' ) ?></p>
                 </div>
             </div>
-            <div class="col-md-3">
+            <?php }
+        ?>
+        <?php
+            if (!get_theme_mod( 'front_service2_checkbox' )) { ?>
+            <div class="col-sm-12 col-md">
+                <div class="square"><i class="<?php echo get_theme_mod( 'front_service2_icon' ) ?>"></i></div>
                 <div class="serv">
-                    <div class="square"><i class="fas fa-cogs"></i></div>
-                    <h5>Problem Solving</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                    <h5><?php echo get_theme_mod( 'front_service2_title' ) ?></h5>
+                    <p><?php echo get_theme_mod( 'front_service2_body' ) ?></p>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="square"><i class="fas fa-globe"></i></div>
+            <?php }
+        ?>
+        <?php
+            if (!get_theme_mod( 'front_service3_checkbox' )) { ?>
+            <div class="col-sm-12 col-md">
+                <div class="square"><i class="<?php echo get_theme_mod( 'front_service3_icon' ) ?>"></i></div>
                 <div class="serv">
-                    <h5>Best Domain</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                    <h5><?php echo get_theme_mod( 'front_service3_title' ) ?></h5>
+                    <p><?php echo get_theme_mod( 'front_service3_body' ) ?></p>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="square"><i class="fas fa-user-shield"></i></div>
+            <?php }
+        ?>
+        <?php
+            if (!get_theme_mod( 'front_service4_checkbox' )) { ?>
+            <div class="col-sm-12 col-md">
+                <div class="square"><i class="<?php echo get_theme_mod( 'front_service4_icon' ) ?>"></i></div>
                 <div class="serv">
-                    <h5>Secure Website</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                    <h5><?php echo get_theme_mod( 'front_service4_title' ) ?></h5>
+                    <p><?php echo get_theme_mod( 'front_service4_body' ) ?></p>
                 </div>
             </div>
+            <?php }
+        ?>
         </div>
     </div>
 </div>

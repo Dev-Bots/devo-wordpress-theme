@@ -1,0 +1,1 @@
+<a href="<?php echo get_site_url()  ?>/ <?php echo get_theme_mod( 'call_to_action' ); ?>" id="callToAction" class="btn btn-lg btn-primary"> <?php echo get_theme_mod( 'call_to_action_name' ); ?></a>
